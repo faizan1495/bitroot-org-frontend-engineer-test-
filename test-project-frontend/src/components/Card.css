@@ -1,0 +1,102 @@
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .card {
+  position: relative;
+  margin: 20px;
+  height: 500px;
+  width: 600px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+}
+
+.card img {
+  height: 50%;
+  width: 100%;
+  border-radius: 6px 6px 0 0;
+  transition: filter 0.3s ease;
+}
+
+.card:hover img {
+  filter: brightness(80%);
+}
+
+.learn-more-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .learn-more-overlay {
+  opacity: 1;
+}
+
+.learn-more-text {
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.card span {
+  color: #aaa8a5;
+  display: flex;
+  margin-left: 30px;
+}
+
+.card_detail {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.24);
+  display: flex;
+  justify-content: center;
+}
+
+.card_detail .modal {
+  margin: 20px;
+  height: 500px;
+  width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin: 10%;
+}
+
+.modal img {
+  height: 50%;
+  width: 100%;
+}
+
+.closebtn {
+  align-self: flex-end;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #aaa8a5;
+  margin-left: 95%;
+}
+
+.card_detail .modal .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-bottom: 20px;
+}
